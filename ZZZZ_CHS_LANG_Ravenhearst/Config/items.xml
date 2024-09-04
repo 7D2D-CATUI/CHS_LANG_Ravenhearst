@@ -1,0 +1,23 @@
+<BigCat>
+	<!-- // BugFix HazmatSuit-JT/Config/items.xml apparelHazmatMaster 防化服不在Clothing分组的问题 -->
+	<append xpath="/items/item[@name='apparelHazmatMaster']">
+		<property name="Group" value="Clothing"/>
+	</append>
+
+	<!-- // BugFix HazmatSuit-JT/Config/items.xml apparelHazmatBoots 防化服道具说明文案问题 -->
+	<append xpath="/items/item[@name='apparelHazmatBoots']">
+		<property name="DescriptionKey" value="apparelHazmatDesc"/>
+	</append>
+	<append xpath="/items/item[@name='apparelHazmatPants']">
+		<property name="DescriptionKey" value="apparelHazmatDesc"/>
+	</append>
+	<append xpath="/items/item[@name='apparelHazmatJacket']">
+		<property name="DescriptionKey" value="apparelHazmatDesc"/>
+	</append>
+	<append xpath="/items/item[@name='apparelHazmatGloves']">
+		<property name="DescriptionKey" value="apparelHazmatDesc"/>
+	</append>
+	<append xpath="/items/item[@name='apparelHazmatMask']">
+		<property name="DescriptionKey" value="apparelHazmatDesc"/>
+	</append>
+</BigCat>

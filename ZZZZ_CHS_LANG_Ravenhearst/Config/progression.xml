@@ -1,0 +1,9 @@
+<BigCat>
+	<!-- // BugFix Z_ActionSkills-JT\Config\progression.xml 动作技能 - 生存 - 驼骡 - 6-10技能说明指向错误 -->
+	<setattribute xpath="//progression//effect_description[@desc_key='perkPackMuleRank6Desc']" name="level">6</setattribute>
+	<setattribute xpath="//progression//effect_description[@desc_key='perkPackMuleRank7Desc']" name="level">7</setattribute>
+	<setattribute xpath="//progression//effect_description[@desc_key='perkPackMuleRank8Desc']" name="level">8</setattribute>
+	<setattribute xpath="//progression//effect_description[@desc_key='perkPackMuleRank9Desc']" name="level">9</setattribute>
+	<setattribute xpath="//progression//effect_description[@desc_key='perkPackMuleRank10Desc']" name="level">10</setattribute>
+	<setattribute xpath="//progression//effect_description[@long_desc_key='perkArcheryCraftingRank6LongDesc']" name="desc_key">perkArcheryCraftingRank6Desc</setattribute>
+</BigCat>

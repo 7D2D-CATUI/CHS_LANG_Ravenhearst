@@ -1,0 +1,57 @@
+﻿<BigCat>
+	<!-- // Fix UI_FoodWater-JT 左下BUFF状态栏适配中文 -->
+	<setattribute xpath="//window[@name='KHHUDLeftStatBars']/rect[@controller='BuffPopoutList']/panel/label" name="pos">56,0</setattribute>
+	<setattribute xpath="//window[@name='KHHUDLeftStatBars']/rect[@controller='BuffPopoutList']/panel/label" name="justify">left</setattribute>
+	<setattribute xpath="//window[@name='KHHUDLeftStatBars']/rect[@controller='BuffPopoutList']/panel/label" name="font_size">24</setattribute>
+
+	<!-- // 美化 删除意义不明的工具栏背景图 -->
+	<remove xpath="//window[@name='windowToolbelt']//sprite[@name='backgroundMain']" />
+
+	<!-- // Translation ZZ_OtherModlets_R4PTRulesMenu xml文案硬编码，只能覆盖UI -->
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='header']/sprite[@name='border']" name="color">[black]</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='header']/sprite[@name='backgroundMain']" name="color">[black]</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/sprite[@name='border']" name="color">[black]</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/label" name="text">《幽灵山庄》生存指南：</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/label" name="color">[white]</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/label" name="pos">10,-25</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/grid" name="pos">20,-72</setattribute>
+	<setattribute xpath="//window[@name='serverinfowindow']/panel[@name='content']/grid" name="cell_height">38</setattribute>
+	<remove xpath="//window[@name='serverinfowindow']/panel[@name='content']/grid//label" />
+	<append xpath="//window[@name='serverinfowindow']/panel[@name='content']/grid">
+		<label depth="3" color="[white]" font_size="24" text="　- 设置：在“选项-视频-幽灵山庄”当中，可以修改部分UI，例如字体，显示丧尸血条等等。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 变质：部分食物和水会随着时间的流逝变质，一些容器如冰箱等可减缓变质时间。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 维修：维修会降低物品道具的品质，更高的动作技能会减少品质的损耗。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 背包：你身上的库存空间很小，探索世界时会小概率找到背包，使用后可携带更多物品。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 商人：商人和营地不再是无敌，商人甚至可能会被杀死，请保护他们。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 感染：感染更加致命，并且症状在死后不会消失，砍伐木桩利用蜂巢制作蜂蜜以解除感染。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 火灾：木制物块会着火，不要慌，使用灭火器来避免火灾。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 矿物：高级矿物可在高级生态区发现，沙漠可以找到铬，废墟可以找到铝和钨，高级稿可获得更多矿物。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 梦魇：随着搜刮阶段提升，夜晚会出现梦魇，击杀有概率获得稀有战利品，请多加小心。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 辐射：5级建筑地块为低危辐射区，野外废墟为高危辐射区，探索前记得穿上全套防化服。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 终章：完成日志任务获得防化服设计图后，可在设计图工作台制作《任务：最后一战》。"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 《幽灵山庄》官方Discord https://discord.gg/YBHD9f3"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 《幽灵山庄》官方Patreon https://www.patreon.com/ravenhearstmod"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 《幽灵山庄》官方捐赠 https://www.paypal.me/FrankCirabisiJr"/>
+		<label depth="3" color="[white]" font_size="24" text="　- 《幽灵山庄》汉化问题反馈QQ群：17258469　　@大猫"/>
+	</append>
+
+	<!-- // 美化 字体加阴影 -->
+	<setattribute xpath="//label[@text]" name="effect">outline</setattribute>
+	<setattribute xpath="//label[@text]" name="effect_color">[black]</setattribute>
+	<setattribute xpath="//label[@text]" name="effect_distance">1,1</setattribute>
+
+	<!-- // Fix ZZ_OtherModlets_ImmersiveDays 顶部日期时间和怪物血条重合的问题 -->
+	<remove xpath="/windows/window[@name='windowCompass']/sprite[@globalopacitymod]" />
+	<append xpath="/windows/window[@name='windowCompass']">
+		<rect name="hud_day" pos="-146,0" rows="1" cols="1" width="141">
+			<sprite depth="0" sprite="ui_game_header_fill" pos="0,0" width="141" height="43" type="sliced" color="150,150,150,100" foregroundlayer="true"/>
+			<sprite depth="1" sprite="ui_game_header_fill" pos="3,-3" width="135" height="37" type="sliced" color="50,50,50,150" foregroundlayer="true"/>
+			<label depth="2" name="TextContent" pos="4,-11" width="133" height="30" text="{daytitle}: {day}" font_size="26" color="[white]" justify="center" />	
+		</rect>
+		<rect name="hud_time" pos="485,0" rows="1" cols="1" width="141" >
+			<sprite depth="0" sprite="ui_game_header_fill" pos="0,0" width="141" height="43" type="sliced" color="150,150,150,100" foregroundlayer="true"/>
+			<sprite depth="1" sprite="ui_game_header_fill" pos="3,-3" width="135" height="37" type="sliced" color="50,50,50,150" foregroundlayer="true"/>
+			<label depth="2" name="TextContent" pos="4,-11" width="133" height="30" text="{timetitle}: {time}" font_size="26" color="[white]" justify="center" />
+		</rect>	
+	</append>
+</BigCat>
